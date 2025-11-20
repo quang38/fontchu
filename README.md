@@ -19,11 +19,12 @@ CreateThread(function()
     AddTextEntry('name', "<FONT FACE='Baloo Paaji 2 Semibold'>~a~</FONT>")
 end)
 ```
-----------------------------------------------------------------------
+-------------------------------------------------------------------------------
 ## 2. Đăng ký font bằng tay (đối vói 1 số loại bị lỗi ô vuông)
 ```lua
 <FONT FACE='Baloo Paaji 2 Semibold'>test</FONT>
 ```
+-------------------------------------------------------------------------------
 ```lua
 <FONT FACE="Baloo Paaji 2 Semibold">test</FONT>
 ```
