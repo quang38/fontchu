@@ -25,6 +25,7 @@ end)
 ```lua
 <FONT FACE='Baloo Paaji 2 Semibold'>test</FONT>
 ```
+hoặc
 ```lua
 <FONT FACE="Baloo Paaji 2 Semibold">test</FONT>
 ```
