@@ -1,7 +1,7 @@
 
 -------------------------------------------------------------------------------
 
-## 1. Đăng ký font trong `es_extended/client/functions.lua`
+## 1. Đăng ký font trong ```es_extended/client/functions.lua```
 
 ```lua
 -- Đăng ký font
