@@ -6,7 +6,8 @@
 ```lua
 -- Đăng ký font
 RegisterFontFile('BalooPaaji2-SemiBold')       -- tên file .gfx
-local balooFontId = RegisterFontId('Baloo Paaji 2 Semibold')
+
+local balooFontId = RegisterFontId('Baloo Paaji 2 Semibold') -- tên id font (để sau này dễ xài ở các src khác)
 
 -- Lưu font vào ESX
 CreateThread(function()
