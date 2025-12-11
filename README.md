@@ -31,3 +31,44 @@ hoặc
 <FONT FACE="Baloo Paaji 2 Semibold">test</FONT>
 ```
 -------------------------------------------------------------------------------
+
+## `QB CORE`
+
+-------------------------------------------------------------------------------
+## 1. Đăng ký font trong `es_extended/client/functions.lua`
+-------------------------------------------------------------------------------
+
+```lua
+CreateThread(function()
+	RegisterFontFile('Oswald') -- the name of your .gfx, without .gfx
+	QBCore.FontId = RegisterFontId('Oswald') -- the name from the .xml
+	AddTextEntry('STRING', "<FONT face='Oswald'>~a~</FONT>")
+	AddTextEntry('CUSTOM_STRING', "<FONT face='Oswald'>~a~</FONT>")
+	
+	while true do
+		Wait(0)
+		local currTime = GetGameTimer()
+
+		for i=1, #QBCore.TimeoutCallbacks, 1 do
+			if QBCore.TimeoutCallbacks[i] then
+				if currTime >= QBCore.TimeoutCallbacks[i].time then
+					QBCore.TimeoutCallbacks[i].cb()
+					QBCore.TimeoutCallbacks[i] = nil
+				end
+			end
+		end
+	end
+end)
+
+```
+-------------------------------------------------------------------------------
+## 2. Đăng ký font bằng tay (đối vói 1 số loại bị lỗi ô vuông)
+-------------------------------------------------------------------------------
+```lua
+<FONT FACE='Oswald'>test</FONT>
+```
+hoặc
+```lua
+<FONT FACE="Oswald">test</FONT>
+```
+-------------------------------------------------------------------------------
